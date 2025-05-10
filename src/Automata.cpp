@@ -39,7 +39,8 @@ Automata::STATES Automata::getState() const {
     return state;
 }
 void Automata::choice(int option) {
-    if (state == ACCEPT && option >= 0 && option < static_cast<int>(menu.size())) {
+    if (state == ACCEPT && option >= 0 &&
+        option < static_cast<int>(menu.size())) {
         selected = option;
         state = CHECK;
         std::cout << "Selected: " << menu[option] << "\n";
