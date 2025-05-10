@@ -30,7 +30,7 @@ void Automata::coin(int value) {
 std::string Automata::getMenu() {
     std::string result = "Menu: \n";
     for (size_t i = 0; i < menu.size(); ++i) {
-        result += std::to_string(i) + ") " + menu[i] + " - " + 
+        result += std::to_string(i) + ") " + menu[i] + " - " +
             std::to_string(prices[i]) + "\n";
     }
     return result;
@@ -39,7 +39,7 @@ Automata::STATES Automata::getState() const {
     return state;
 }
 void Automata::choice(int option) {
-    if (state == ACCEPT && option >= 0 && option < (int)menu.size()) {
+    if (state == ACCEPT && option >= 0 && option < static_cast<int>(menu.size())) {
         selected = option;
         state = CHECK;
         std::cout << "Selected: " << menu[option] << "\n";
