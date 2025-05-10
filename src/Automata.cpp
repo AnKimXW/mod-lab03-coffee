@@ -1,6 +1,7 @@
 // Copyright 2025 Owner
 #include "Automata.h"
 #include <iostream>
+#include <string>
 Automata::Automata() : cash(0), state(OFF), selected(-1) {
     menu = { "Tea", "Cofee", "Milk" };
     prices = { 30, 50, 40 };
@@ -12,7 +13,7 @@ void Automata::on() {
     }
 }
 void Automata::off() {
-	if (state == WAIT) {
+    if (state == WAIT) {
         state = OFF;
         std::cout << "Automata is OFF\n";
     }
@@ -29,7 +30,8 @@ void Automata::coin(int value) {
 std::string Automata::getMenu() {
     std::string result = "Menu: \n";
     for (size_t i = 0; i < menu.size(); ++i) {
-        result += std::to_string(i) + ") " + menu[i] + " - " + std::to_string(prices[i]) + "\n";
+        result += std::to_string(i) + ") " + menu[i] + " - " + 
+            std::to_string(prices[i]) + "\n";
     }
     return result;
 }

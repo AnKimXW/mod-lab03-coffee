@@ -1,6 +1,6 @@
 // Copyright 2025 Owner
-#ifndef AUTOMATA_C
-#define AUTOMATA_C
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
 #include <string>
 #include <vector>
 class Automata {
@@ -27,4 +27,4 @@ class Automata {
     STATES state;
     int selected;
 };
-#endif // !AUTOMATA_Ct Automata(int);
+#endif // INCLUDE_AUTOMATA_H_
